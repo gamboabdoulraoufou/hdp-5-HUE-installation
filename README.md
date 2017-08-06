@@ -11,12 +11,15 @@ sudo su - root
 yum install -y ant
 yum group -y install "Development Tools"
 yum install -y libxslt-devel libxml2-devel
-yum install -y openssl-devel
+yum install -y openssl-devel 
 yum install -y openldap-devel
 yum install -y mysql-devel
 yum install -y sqlite-devel
+yum install -y krb5-devel
 yum install -y libkrb5-dev libmysqlclient-dev # ko
-yum install -y libssl-dev libsasl2-dev libsasl2-modules-gssapi-mit # ko
+yum install -y libssl-devel libsasl2-devel libsasl2-modules-gssapi-mit # ko
+yum -y install cyrus-sasl-devel cyrus-sasl-gssapi cyrus-sasl-md5 cyrus-sasl-plain
+yum install -y cyrus-sasl-gssapi
 yum install -y libtidy-0.99-0 # ko
 yum install -y maven
 yum install -y python-dev # ko
