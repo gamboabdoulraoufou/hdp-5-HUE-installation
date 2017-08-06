@@ -35,8 +35,7 @@ sudo make install
 
 ```
 
-> Configuring Hadoop
-Configure Hadoop cluster to accept connections from HUE:
+> Configure Hadoop cluster to accept connections from HUE:
 - ensure WebHDFS is enabled
 ![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_web_hdfs2.png)
 - proxy user hosts and groups for HUE
@@ -45,6 +44,25 @@ Configure Hadoop cluster to accept connections from HUE:
 ![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_acl.png)
 
 
+> Add cluster information to the HUE configuration file
 
-and add our cluster information to the HUE configuration file
+```sh
+# create new copy of HUE config file
+cp /usr/local/hue/desktop/conf/hue.ini /usr/local/hue/desktop/conf/hue.ini.bkp
 
+# edit HUE configuration file
+vi /usr/local/hue/desktop/conf/hue.ini
+
+# make change according to the following step, save and quit
+
+```
+
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_conf1.png)
+
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_conf2.png)
+
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_conf3.png)
+
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_conf4.png)
+
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_conf5.png)
