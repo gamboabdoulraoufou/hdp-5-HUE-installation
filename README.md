@@ -10,13 +10,16 @@ sudo su - root
 # install packages
 yum install -y ant
 yum group -y install "Development Tools"
-yum install -y libkrb5-dev libmysqlclient-dev ko
-yum install -y libssl-dev libsasl2-dev libsasl2-modules-gssapi-mit ko
-yum install -y libsqlite3-dev ko
-yum install -y libtidy-0.99-0 libxml2-dev libxslt-dev ko
+yum install -y libxslt-devel libxml2-devel
+yum install -y openssl-devel
+yum install -y openldap-devel
+yum install -y mysql-devel
+yum install -y sqlite-devel
+yum install -y libkrb5-dev libmysqlclient-dev # ko
+yum install -y libssl-dev libsasl2-dev libsasl2-modules-gssapi-mit # ko
+yum install -y libtidy-0.99-0 # ko
 yum install -y maven
-yum install -y libldap2-dev ko
-yum install -y python-dev ko
+yum install -y python-dev # ko
 yum install -y python-simplejson python-setuptools
 ```
 
@@ -59,7 +62,7 @@ vi /usr/local/hue/desktop/conf/hue.ini
 
 ![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_conf1.png)
 
-![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_conf2.png){:height="50%" width="50%"}
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_conf2.png)
 
 ![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_conf3.png | width=50)
 
