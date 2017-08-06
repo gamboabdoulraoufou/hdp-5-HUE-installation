@@ -69,3 +69,28 @@ vi /usr/local/hue/desktop/conf/hue.ini
 ![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_conf4.png)
 
 ![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_conf5.png)
+
+> Start HUE
+
+```sh
+# add user HUE
+adduser hue
+
+# set hue password
+passwd hue
+
+# set permission to hue user
+chown -R hue:hue /usr/local/hue
+
+# go to HUE folder
+cd /usr/local/hue/build/env/bin/
+
+# run HUE
+./supervisor
+
+```
+
+> Go to http://IP:8888 or http:hostname:8888
+
+
+
