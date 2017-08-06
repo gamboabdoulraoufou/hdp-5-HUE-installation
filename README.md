@@ -38,7 +38,7 @@ sudo make install
 > Configuring Hadoop
 Configure Hadoop cluster to accept connections from HUE:
 - ensure WebHDFS is enabled
-![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_web_hdfs.png)
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_web_hdfs2.png)
 - proxy user hosts and groups for HUE
 ![MetaStore remote database](https://github.com/gamboabdoulraoufou/hdp-5-HUE-installation/blob/master/img/hue_proxy.png)
 - enable HDFS file access control lists (FACLs) (optional)
