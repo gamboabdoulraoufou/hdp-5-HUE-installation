@@ -31,6 +31,7 @@ yum install -y python-simplejson python-setuptools
 ```sh
 # download 
 wget https://dl.dropboxusercontent.com/u/730827/hue/releases/3.8.1/hue-3.8.1.tgz
+wget http://gethue.com/downloads/releases/3.8.1/hue-3.8.1.tgz
 
 # unpack package
 tar -xvzf hue-3.8.1.tgz
