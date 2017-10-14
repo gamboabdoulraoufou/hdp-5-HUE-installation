@@ -8,37 +8,36 @@
 sudo su - root
 
 # install packages
-yum install -y ant
-yum group -y install "Development Tools"
-yum install -y libxslt-devel libxml2-devel
-yum install -y openssl-devel 
-yum install -y openldap-devel
-yum install -y mysql-devel
-yum install -y sqlite-devel
-yum install -y krb5-devel
-yum install -y libkrb5-dev libmysqlclient-dev # ko
-yum install -y libssl-devel libsasl2-devel libsasl2-modules-gssapi-mit # ko
-yum -y install cyrus-sasl-devel cyrus-sasl-gssapi cyrus-sasl-md5 cyrus-sasl-plain
-yum install -y cyrus-sasl-gssapi
-yum install -y libtidy-0.99-0 # ko
-yum install -y maven
-yum install -y python-dev # ko
-yum install -y python-simplejson python-setuptools
+ yum -y install libffi-devel gmp-devel ant gcc gcc-c++ rsync krb5-devel openssl-devel \
+ cyrus-sasl-devel cyrus-sasl-gssapi sqlite-devel openldap-devel libtidy libxml2-devel \
+ libxslt-devel maven
+ 
+ yum -y install mysql-devel mysql
+ 
+ yum -y install python-devel python-simplejson python-setuptools
 ```
 
 > Download and install HUE
 
 ```sh
 # download 
-wget https://dl.dropboxusercontent.com/u/730827/hue/releases/3.8.1/hue-3.8.1.tgz
-wget http://gethue.com/downloads/releases/3.8.1/hue-3.8.1.tgz
+wget http://gethue.com/downloads/releases/4.0.1/hue-4.0.1.tgz
 
 # unpack package
-tar -xvzf hue-3.8.1.tgz
+tar -xzvf hue-4.0.1.tgz
 
-# install 
-cd hue-3.8.1
-sudo make install
+# create hue directory
+mkdir -p /usr/local/hue
+
+# Copy untar binaries into the new folder
+mv hue-4.0.0/* /usr/local/hue
+
+# go to hue directory
+cd /usr/local/hue
+
+# Build the hue module
+make apps
+
 
 ```
 
@@ -91,6 +90,19 @@ cd /usr/local/hue/build/env/bin/
 
 # run HUE
 ./supervisor
+
+```
+
+> Configure HUE to start after reboot
+```sh
+# edit crontab as root
+crontab -e 
+
+# add the following line
+#### START ####
+#start HUE
+@reboot sleep 120; /usr/local/hue/build/env/bin/supervisor -d
+#### END ####
 
 ```
 
