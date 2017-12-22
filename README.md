@@ -12,6 +12,8 @@ sudo su - root
  cyrus-sasl-devel cyrus-sasl-gssapi sqlite-devel openldap-devel libtidy libxml2-devel \
  libxslt-devel maven
  
+ yum install cyrus-sasl-devel cyrus-sasl-gssapi cyrus-sasl-md5 cyrus-sasl-plain
+ 
  yum -y install mysql-devel mysql
  
  yum -y install python-devel python-simplejson python-setuptools
